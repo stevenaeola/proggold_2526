@@ -4,6 +4,8 @@ const characters = ["Tow Mater",
   "Julia"
 ]
 
+app.use(express.static('client'));
+
 app.get('/', function(req, resp){
   console.log('requested home page')
   resp.send('Hello from Radiator Springs')
