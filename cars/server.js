@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
-const characters = ["Tow Mater",
-  "Julia"
+const characters = 
+[
+  {"name": "Tow Mater", "imageURL": "", "films": [1, 2, 3]},
+  {"name": "Cruz Ramirez", "imageURL": "https://static.wikia.nocookie.net/worldofcarsdrivein/images/9/99/CruzDinocoArtwork.png/revision/latest?cb=20251201220353", "films": [3]}
 ]
 
 app.use(express.static('client'));
@@ -22,7 +24,7 @@ app.get('/character/detail/:num', function(req,resp){
 app.get('/character/search', function(req,resp){
   console.log("seraching for lambs")
   let search_term = req.query.search_term
-  let results = characters.filter(item => item.includes(search_term))
+  let results = characters.filter(item => item.name.toLowerCase().includes(search_term.toLowerCase()))
   resp.send(results)
 })
 
