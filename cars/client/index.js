@@ -12,8 +12,20 @@ window.addEventListener("DOMContentLoaded", async function(event){
   let response = await fetch('http://127.0.0.1:8090/character/list')
   let carlist = await response.text()
   console.log(carlist)
-  for(let car of carlist){
+  for(let car of JSON.parse(carlist)){
     console.log(car.name)
-  }
 
+    let carString=`<div class="card shadow-sm">
+                <img src="${car.imageURL}">
+
+                <div class="card-body">
+                  <h5 class="card-title">${car.name}</h5>
+                  <p class="card-text">
+                    Appears in Cars 3
+                  </p>
+                </div>
+              </div>`
+    let col1 = document.getElementById('col1')
+    col1.innerHTML=carString
+  }
 })

@@ -3,7 +3,7 @@ const app = express()
 const characters = 
 [
   {"name": "Tow Mater", "imageURL": "", "films": [1, 2, 3]},
-  {"name": "Cruz Ramirez", "imageURL": "https://static.wikia.nocookie.net/worldofcarsdrivein/images/9/99/CruzDinocoArtwork.png/revision/latest?cb=20251201220353", "films": [3]}
+  {"name": "Cruz Ramirez the hero", "imageURL": "cruz.png", "films": [3]}
 ]
 
 app.use(express.static('client'));
