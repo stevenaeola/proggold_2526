@@ -21,6 +21,13 @@ app.get('/character/detail/:num', function(req,resp){
     resp.send(char)
 })
 
+
+app.get('/character/list', function(req,resp){
+  console.log('getting all cars characters')
+  console.log(characters)
+  resp.send(characters)
+})
+
 app.get('/character/search', function(req,resp){
   console.log("seraching for lambs")
   let search_term = req.query.search_term
