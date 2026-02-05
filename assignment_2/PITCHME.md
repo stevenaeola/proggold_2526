@@ -60,7 +60,7 @@
   - events
   - comments
 - Could be e.g. club, social, health, gallery
-- If you are not sure then ask me
+- Feedback on choice of application through formative assignment
 
 ---
 
