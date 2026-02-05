@@ -78,10 +78,11 @@ Each entity type (e.g. picture) has
 - GET method to list/search (returns a list of ids and names)
 - GET method for individual details (includes details of related entities)
 - POST method to add new entity (one entity type will be enough)
+
+
+
 - Document your API in the style of the [ChatGPT API](https://platform.openai.com/docs/api-reference/)
 - see [other good API docs](https://nordicapis.com/5-examples-of-excellent-api-documentation/)
-
-
 - Response provided as JSON
 - Content-type needs to be correct
 - HTTP codes should be correct: use 200, 400 or 403 (if using authentication)
