@@ -158,6 +158,8 @@ Equally weighted 20% of assignment mark each
 - Include demonstration of how to start the program
 - All functionality will be assessed by what is demonstrated in the video
 - If it is not demonstrated in the video, you will not get a mark for it
+
+
 - Quality of video presentation will be marked separately from functionality:
   - Structure; Visual Presentation; Audio explanation
 - Lose 10% of marks for every 10 seconds over 2 minutes
@@ -165,7 +167,7 @@ Equally weighted 20% of assignment mark each
 
 ## How to do the assignment
 
-- Design HTML
+- Design HTML and application area (formative)
 - Design web service
 - Join with Fetch API
 - Read the [FAQ](FAQ.md)
