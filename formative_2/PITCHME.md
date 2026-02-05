@@ -7,6 +7,7 @@
 
 - Submission of formative preparatory work by 14:00 19 February 2026
 - Engagement with the formative (i.e. effort made, submitted on time) will be worth 10% of the module mark
+- Work on this formative during the Week 15 practical class
 - Summative submission of code and video by 14:00 26 March 2026
 
 ---
