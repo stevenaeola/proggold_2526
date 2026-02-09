@@ -26,6 +26,6 @@ window.addEventListener("DOMContentLoaded", async function(event){
                 </div>
               </div>`
     let col1 = document.getElementById('col1')
-    col1.innerHTML=carString
+    col1.innerHTML+=carString
   }
 })
