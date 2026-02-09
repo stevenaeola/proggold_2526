@@ -6,7 +6,7 @@
 
 - Submission of code and video by 14:00 26 March 2026
 - Return by 7 May 2026
-- Contributes 60% to module marks
+- Contributes 50% to module marks
 - This is an individual piece of work
 
 ---
