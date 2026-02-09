@@ -8,11 +8,9 @@ search_button.addEventListener('click', function(event) {
 
 })
 
-window.addEventListener("DOMContentLoaded", async function(event){
-  let response = await fetch('http://127.0.0.1:8090/character/list')
-  let carlist = await response.text()
-  console.log(carlist)
-  for(let car of JSON.parse(carlist)){
+function displayCars(carList){
+  console.log(carList)
+  for(let car of JSON.parse(carList)){
     console.log(car.name)
 
     let carString=`
@@ -31,4 +29,12 @@ window.addEventListener("DOMContentLoaded", async function(event){
     let row1 = document.getElementById('row1')
     row1.innerHTML+=carString
   }
+}
+
+window.addEventListener("DOMContentLoaded", async function(event){
+  let response = await fetch('http://127.0.0.1:8090/character/list')
+  let carlist = await response.text()
+  displayCars(carlist)
+
+
 })
