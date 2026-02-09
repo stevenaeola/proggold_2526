@@ -15,7 +15,9 @@ window.addEventListener("DOMContentLoaded", async function(event){
   for(let car of JSON.parse(carlist)){
     console.log(car.name)
 
-    let carString=`<div class="card shadow-sm">
+    let carString=`
+        <div class="col">
+            <div class="card shadow-sm">
                 <img src="${car.imageURL}">
 
                 <div class="card-body">
@@ -24,8 +26,9 @@ window.addEventListener("DOMContentLoaded", async function(event){
                     Appears in Cars 3
                   </p>
                 </div>
-              </div>`
-    let col1 = document.getElementById('col1')
-    col1.innerHTML+=carString
+              </div>
+          </div>`
+    let row1 = document.getElementById('row1')
+    row1.innerHTML+=carString
   }
 })
