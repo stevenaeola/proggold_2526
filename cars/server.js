@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const characters = 
 [
-  {"name": "Tow Mater", "imageURL": "", "films": [1, 2, 3]},
+  {"name": "Tow Mater", "imageURL": "mater.png", "films": [1, 2, 3]},
   {"name": "Cruz Ramirez the hero", "imageURL": "cruz.png", "films": [3]}
 ]
 
