@@ -14,6 +14,14 @@ function displayCars(carList){
   row1.innerHTML= ""
   for(let car of JSON.parse(carList)){
     console.log(car.name)
+    let films = car.films
+    let filmText
+    if(films.length >0){
+      filmText = "Appears in Cars " + films.join(", ")
+    }
+    else{
+      filmText = "[not sure which films - mussing data]"
+    }
 
     let carString=`
         <div class="col">
@@ -22,9 +30,7 @@ function displayCars(carList){
 
                 <div class="card-body">
                   <h5 class="card-title">${car.name}</h5>
-                  <p class="card-text">
-                    Appears in Cars 3
-                  </p>
+                  <p class="card-text">${filmText} </p>
                 </div>
               </div>
           </div>`
