@@ -6,6 +6,15 @@ const characters =
   {"name": "Cruz Ramirez the hero", "imageURL": "cruz.png", "films": [3]}
 ]
 
+const films = [
+  
+    // plot synposis from https://en.wikipedia.org/wiki/Cars_(film)
+    {"id": "1", "name": "Cars", "year": 2006, "synposis": "Set in a world populated entirely by anthropomorphic vehicles, the film follows a young self-obsessed racecar named Lightning McQueen who, on the way to the most important race of his life, becomes stranded in a forgotten town along U.S. Route 66 called Radiator Springs, where he learns about friendship and begins to reevaluate his priorities."},
+    {"id": "2", "name": "Cars 2", "year": 2011},
+    {"id": "3", "name": "Cars 3", "year": 2017},
+  ]
+
+
 app.use(express.static('client'));
 
 app.get('/', function(req, resp){
@@ -29,10 +38,23 @@ app.get('/character/list', function(req,resp){
 })
 
 app.get('/character/search', function(req,resp){
-  console.log("seraching for lambs")
+  console.log("searching for lambs")
   let search_term = req.query.search_term
   let results = characters.filter(item => item.name.toLowerCase().includes(search_term.toLowerCase()))
   resp.send(results)
+})
+
+app.get('/film/list', function(req, resp){
+  resp.send(films)
+})
+
+app.get('/film/detail/:id', function(req, resp){
+  let id = req.params.id
+  console.log("getting an individual film " + id)
+
+
+    let film = films.find(f => f.id == id)
+    resp.send(film)
 })
 
 app.get('/random/:max', function(req, resp){

@@ -15,9 +15,13 @@ function displayCars(carList){
   for(let car of JSON.parse(carList)){
     console.log(car.name)
     let films = car.films
-    let filmText
+    let film
     if(films.length >0){
-      filmText = "Appears in Cars " + films.join(", ")
+      filmText = "Appears in Cars franchise "
+    
+      for(let film of films){
+         filmText+= `<div id='${film}'>${film}</div>`
+      }
     }
     else{
       filmText = "[not sure which films - mussing data]"
