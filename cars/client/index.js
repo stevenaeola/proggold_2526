@@ -1,12 +1,4 @@
-let search_button = document.getElementById('search_submit');
 
-search_button.addEventListener('click', function(event) {
-    fetch('http://127.0.0.1:8090/character/search?search_term=a')
-    .then(response => response.text())
-    .then(body =>
-      document.getElementById('search_results').innerHTML=body)
-
-})
 
 function displayCars(carList){
   console.log(carList)
@@ -49,6 +41,7 @@ window.addEventListener("DOMContentLoaded", async function(event){
 })
 
 const search_form = document.getElementById("search_form")
+
 search_form.addEventListener("input", async function(event){
  // alert ("input on form")
   const search_box = document.getElementById('search_term')
@@ -58,4 +51,9 @@ search_form.addEventListener("input", async function(event){
   let carlist = await response.text()
   displayCars(carlist)
 // http://127.0.0.1:8090/character/search"
+})
+
+
+search_form.addEventListener('submit', function(event) {
+  event.preventDefault();
 })
