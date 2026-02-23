@@ -17,6 +17,8 @@ const films = [
 
 app.use(express.static('client'));
 
+app.use(express.json());
+
 app.get('/', function(req, resp){
   console.log('requested home page')
   resp.send('Hello from Radiator Springs')
@@ -43,6 +45,16 @@ app.get('/character/search', function(req,resp){
   let results = characters.filter(item => item.name.toLowerCase().includes(search_term.toLowerCase()))
   resp.send(results)
 })
+
+app.post("/character/new", function(req, resp){
+    console.log("request body", req.body);
+    let new_char = req.body;
+    new_char.films = [];
+    characters.push(req.body);
+    console.log("New characters")
+    console.log(characters)
+    resp.send(characters);
+});
 
 app.get('/film/list', function(req, resp){
   resp.send(films)

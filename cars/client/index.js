@@ -57,3 +57,29 @@ search_form.addEventListener("input", async function(event){
 search_form.addEventListener('submit', function(event) {
   event.preventDefault();
 })
+
+const new_char_form = document.getElementById('new_char_form');
+new_char_form.addEventListener('submit', async function(event){
+    event.preventDefault();
+    const formData = new FormData(new_char_form);
+    console.log(formData);
+    console.log(Object.fromEntries(formData.entries()));
+    const formJSON = JSON.stringify(Object.fromEntries(formData.entries()));
+    console.log("Form data", formData);
+    const response = await fetch('/character/new',
+    {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+          },
+        body: formJSON
+    });
+    if(response.ok){
+        const responseBody = await response.text();
+        console.log("response from POST: ", responseBody)
+    }
+    else{
+        alert('Problem with POST request ' + response.statusText);
+    }
+    // do nothing with the response
+})
