@@ -4,7 +4,7 @@
   "description": "Fandom of Hudson et al",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server.js"
   },
   "keywords": [
@@ -15,5 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "supertest": "^7.2.2"
   }
 }
