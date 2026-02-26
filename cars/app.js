@@ -1,18 +1,9 @@
 const express = require('express')
 const app = express()
-const characters = 
-[
-  {"name": "Tow Mater", "imageURL": "mater.png", "films": [1, 2, 3]},
-  {"name": "Cruz Ramirez the hero", "imageURL": "cruz.png", "films": [3]}
-]
+const characters = require("./characters.json")
+const fs = require('fs');
 
-const films = [
-  
-    // plot synposis from https://en.wikipedia.org/wiki/Cars_(film)
-    {"id": "1", "name": "Cars", "year": 2006, "synposis": "Set in a world populated entirely by anthropomorphic vehicles, the film follows a young self-obsessed racecar named Lightning McQueen who, on the way to the most important race of his life, becomes stranded in a forgotten town along U.S. Route 66 called Radiator Springs, where he learns about friendship and begins to reevaluate his priorities."},
-    {"id": "2", "name": "Cars 2", "year": 2011},
-    {"id": "3", "name": "Cars 3", "year": 2017},
-  ]
+const films = require("./films.json")
 
 
 app.use(express.static('client'));
@@ -58,6 +49,8 @@ app.post("/character/new", function(req, resp){
     characters.push(req.body);
     console.log("New characters")
     console.log(characters)
+    fs.writeFileSync('./characters.json', JSON.stringify(characters));
+
     resp.send(characters);
 });
 
