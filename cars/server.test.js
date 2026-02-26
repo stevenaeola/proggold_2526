@@ -17,6 +17,12 @@ describe('Test the character service', () => {
 	    .expect('Content-type', /json/);
     });
 
+    test('GET /character/search handles missing parameter', () => {
+        return request(app)
+	    .get('/character/search')
+	    .expect(400);
+    });
+
     test('GET /thing/list includes red hair', () => {
         return request(app)
 	    .get('/thing/list')

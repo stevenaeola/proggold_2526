@@ -42,6 +42,10 @@ app.get('/character/list', function(req,resp){
 app.get('/character/search', function(req,resp){
   console.log("searching for lambs")
   let search_term = req.query.search_term
+  if(!search_term){
+    resp.status(400).send('no search term specified')
+    return
+  }
   let results = characters.filter(item => item.name.toLowerCase().includes(search_term.toLowerCase()))
   resp.send(results)
 })
