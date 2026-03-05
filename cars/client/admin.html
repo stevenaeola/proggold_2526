@@ -250,36 +250,46 @@
       </div>
     </header>
     <main>
-      <section class="py-5 text-center container">
-        <div class="row py-lg-5">
-          <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">Cars we love them all and their crazy little songs and stuff</h1>
-            <p class="lead text-body-secondary">
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don’t simply skip over it entirely.
-            </p>
-            <p>
-            <form  id="search_form">
-          <input name="search_term" id="search_term">
-              <button id='search_submit' type="submit">Search</button>
-            </form>  
-            <div id="search_results"></div>
-            </p>
-          </div>
-        </div>
 
-      </section>
-      <div class="album py-5 bg-body-tertiary">
-        <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="row1">
-          </div>
-        </div>
+<!-- from https://getbootstrap.com/docs/5.3/components/modal/#via-javascript-->
+
+<!-- Modal -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="authModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-              <div>
-                
+      <div class="modal-body">
+        Please confirm that you are allowed to do this (this would be login/authentication)
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-    </main>
+      <div id="character_list">
+
+      </div>
+<form id="new_char_form">
+<div class="mb-3">
+  <label for="new_char_name" class="form-label">Name</label>
+  <input class="form-control" id="new_char_name" name="name" placeholder="Name of character">
+</div>
+<div class="mb-3">
+  <label for="new_char_url" class="form-label">ImageURL</label>
+  <input class="form-control" id="new_char_url" name="imageURL" placeholder="Image URL">
+</div>
+<div>
+  <button type="submit">Add this character</button>
+</div>
+</form>
+</div>
+</main>
     <footer class="text-body-secondary py-5">
       <div class="container">
         <p class="float-end mb-1"><a href="#">Back to top</a></p>
@@ -295,5 +305,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="./index.js"></script>
+    <script src="./admin.js"></script>
+
   </body>
 </html>

@@ -1,4 +1,6 @@
 const express = require('express')
+const cookieSession = require('cookie-session')
+
 const app = express()
 const characters = require("./characters.json")
 const fs = require('fs');
@@ -10,9 +12,24 @@ app.use(express.static('client'));
 
 app.use(express.json());
 
-app.get('/', function(req, resp){
+app.use(cookieSession({
+  name: 'session',
+  keys: ['key1', 'key2'],
+
+  // Cookie Options
+  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}))
+
+
+app.get('/views', function(req, resp){
+    // Update views
+  req.session.views = (req.session.views || 0) + 1
+
+
   console.log('requested home page')
-  resp.send('Hello from Radiator Springs')
+  resp.send('Hello from Radiator Springs. Visit number ' + req.session.views)
+    // Write response
+//  res.end(req.session.views + ' views')
 })
 
 app.get('/character/detail/:num', function(req,resp){
