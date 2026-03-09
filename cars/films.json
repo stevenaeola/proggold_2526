@@ -1,5 +1,5 @@
 [  
     {"id": "1", "name": "Cars", "year": 2006, "synposis": "Set in a world populated entirely by anthropomorphic vehicles, the film follows a young self-obsessed racecar named Lightning McQueen who, on the way to the most important race of his life, becomes stranded in a forgotten town along U.S. Route 66 called Radiator Springs, where he learns about friendship and begins to reevaluate his priorities."},
-    {"id": "2", "name": "Cars 2", "year": 2011},
-    {"id": "3", "name": "Cars 3", "year": 2017}
+    {"id": "2", "name": "Cars 2", "year": 2011, "synopsis": "race car Lightning McQueen and his tow-truck friend Mater travel the world for a racing tournament, but Mater accidentally gets caught up in an international spy mission."},
+    {"id": "3", "name": "Cars 3", "year": 2017, "synopsis": "veteran racer Lightning McQueen struggles to compete with a new generation of high-tech racers and trains with young technician Cruz Ramirez to prove he still belongs on the track"}
   ]
