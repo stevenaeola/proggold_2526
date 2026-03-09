@@ -5,7 +5,7 @@
   { "name": "LIghtningMcQueen", "imageURL": "mcqueen.png", "films": [] },
   { "name": "Sally Carrera", "imageURL": "Sally.webp", "films": [1, 2, 3] },
   { "name": "Chick Hicks", "imageURL": "Chick_Hicks.webp", "films": [1, 3] },
-  { "name": "Strip Weathers", "imageURL": "Strip_Weathers.webp", "films": [1, 3] }
+  { "name": "Strip Weathers", "imageURL": "Strip_Weathers.webp", "films": [1, 3] },
   { "name": "Luigi", "imageURL": "Luigi.webp", "films": [1, 2, 3] },
   { "name": "Guido", "imageURL": "Guido.webp", "films": [1, 2, 3] }
 ]
