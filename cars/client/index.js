@@ -37,10 +37,48 @@ function displayCars(carList){
   }
 }
 
+function displayFilms(carList, filmList){
+  console.log(carList, filmList)
+  let row2 = document.getElementById('row2')
+  if(!row2){
+    return;
+  }
+  row2.innerHTML= ""
+  for(let film of JSON.parse(filmList)){
+    console.log(film.name)
+    includedCars = ""
+    for(let car of JSON.parse(carList)){
+      if(car.films.includes(parseInt(film.id))){
+        includedCars+= car.name + ", "
+      }}
+
+    if (includedCars == ""){
+      includedCars = "No-one, "
+    }
+
+    let filmString=`
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="${film.imageURL}">
+
+                <div class="card-body">
+                  <h5 class="card-title">${film.name}</h5>
+                  <p class="card-text">${film.synopsis} </p>
+                  <p class="card-text">Features: ${includedCars.slice(0, -2)}</p>
+                </div>
+              </div>
+          </div>`
+    row2.innerHTML+=filmString
+  }
+}
+
 window.addEventListener("DOMContentLoaded", async function(event){
-  let response = await fetch('http://127.0.0.1:8090/character/list')
-  let carlist = await response.text()
-  displayCars(carlist)
+  let carResponse = await fetch('http://127.0.0.1:8090/character/list')
+  let filmResponse = await fetch('http://127.0.0.1:8090/film/list')
+  let carList = await carResponse.text()
+  let filmList = await filmResponse.text()
+  displayCars(carList)
+  displayFilms(carList, filmList)
 })
 
 const search_form = document.getElementById("search_form")
@@ -52,8 +90,8 @@ if (search_form) {
     let search_term = search_box.value
     // alert("search for" + search_term)
     let response = await fetch(`http://127.0.0.1:8090/character/search?search_term=${search_term}`)
-    let carlist = await response.text()
-    displayCars(carlist)
+    let carList = await response.text()
+    displayCars(carList)
     // http://127.0.0.1:8090/character/search"
   })
 
