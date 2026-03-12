@@ -19,5 +19,9 @@
   { "name": "Jerry Recycled Batteries", "imageURL": "Jerry_recycled_batteries.webp", "films": [1] },
   { "name": "Mia & Tia", "imageURL": "Mia_Tia.webp", "films": [1, 2] },
   { "name": "Darrell Cartrip", "imageURL": "Darrell_cartrip.webp", "films": [1, 2, 3] },
-  { "name": "Bob Cutlass", "imageURL": "Bob_Cutlass.webp", "films": [1, 3] }
+  { "name": "Bob Cutlass", "imageURL": "Bob_Cutlass.webp", "films": [1, 3] },
+  {"name": "Francesco Bernoulli","imageURL":"Bernoulli.jpg","films":[2]},
+  {"name":"Professor Zundapp","imageURL": "Professor_z_tazed.png","films":[2]},
+  {"name": "Tony Trihull", "imageURL": "Trihull.png", "films": [2]},
+  {"name": "Siddeley", "imageURL": "Siddeley.png", "films": [2]}
 ]
