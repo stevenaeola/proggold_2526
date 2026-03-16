@@ -66,8 +66,9 @@ app.post("/character/new", function(req, resp){
     characters.push(req.body);
     console.log("New characters")
     console.log(characters)
-    fs.writeFileSync('./characters.json', JSON.stringify(characters));
-
+    if(!app.TESTING){
+      fs.writeFileSync('./characters.json', JSON.stringify(characters));
+    }
     resp.send(characters);
 });
 
