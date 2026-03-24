@@ -1,4 +1,4 @@
-## DRAFT COMP1111 Programming (Gold) Summative Assessment 2 DRAFT {data-background-color=#7E317B} 
+## COMP1111 Programming (Gold) Summative Assessment 2  {data-background-color=#7E317B} 
 
 ---
 

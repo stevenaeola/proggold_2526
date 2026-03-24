@@ -1,4 +1,4 @@
-## DRAFT COMP1111 Programming (Gold) Summative Assessment 2 DRAFT  
+## COMP1111 Programming (Gold) Summative Assessment 2   
 
 
 ## Term 2 Programming Exercise Outline
